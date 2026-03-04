@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Quốc Tế | Summer Tourist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- BREADCRUMB -->
+<section class="breadcrumb">
+    <div class="container">
+        Trang chủ / <strong>Tour quốc tế</strong>
+    </div>
+</section>
+
+<!-- TOUR LIST -->
+<section class="tour-section">
+    <div class="container">
+
+        <div class="tour-topbar">
+            <div>Hiển thị 1–12 của 20 kết quả</div>
+            <select>
+                <option>Sắp xếp mặc định</option>
+                <option>Giá tăng dần</option>
+                <option>Giá giảm dần</option>
+            </select>
+        </div>
+
+        <div class="tour-grid">
+
+            <!-- TOUR ITEM -->
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?11" alt="">
+                <div class="tour-content">
+                    <h3>BALI – UBUD – NUSA PENIDA</h3>
+                    <p>4 ngày 3 đêm</p>
+                    <div class="price">14.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?12" alt="">
+                <div class="tour-content">
+                    <h3>BANGKOK – PATTAYA</h3>
+                    <p>5 ngày 4 đêm</p>
+                    <div class="price">12.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?13" alt="">
+                <div class="tour-content">
+                    <h3>ĐAN MẠCH – NA UY – THỤY ĐIỂN – PHẦN LAN</h3>
+                    <p>10 ngày 9 đêm</p>
+                    <div class="price">79.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?14" alt="">
+                <div class="tour-content">
+                    <h3>ĐỨC – HÀ LAN – BỈ – PHÁP</h3>
+                    <p>10 ngày 9 đêm</p>
+                    <div class="price">59.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?15" alt="">
+                <div class="tour-content">
+                    <h3>HỒ CHÍ MINH – BALI – PENIDA</h3>
+                    <p>4 ngày 3 đêm</p>
+                    <div class="price">12.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?16" alt="">
+                <div class="tour-content">
+                    <h3>HỒ CHÍ MINH – ĐÀI BẮC – CAO HÙNG</h3>
+                    <p>5 ngày 4 đêm</p>
+                    <div class="price">15.xxx.xxx VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+        </div>
+
+    </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id, url) {
+    fetch(url).then(r=>r.text()).then(html=>document.getElementById(id).innerHTML=html);
+  }
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>

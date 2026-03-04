@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Summer Tourist</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- header placeholder -->
+<div id="site-header"></div>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container">
+        <h1>GIỚI THIỆU</h1>
+        <p>Summer Tourist – Nâng cao giá trị Du lịch Việt</p>
+    </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-section">
+    <div class="container about-grid">
+
+        <div class="about-text">
+            <h2>CÔNG TY TNHH TMDV DU LỊCH SUMMER TOURIST</h2>
+            <p>
+                Được thành lập từ năm 2018, Summer Tourist là đơn vị chuyên cung cấp
+                các dịch vụ tour du lịch trong nước và quốc tế, mang trong mình
+                sứ mệnh <strong>“Nâng Cao Giá Trị Du Lịch Việt”</strong>.
+            </p>
+
+            <p>
+                Với hơn 5 năm kinh nghiệm, chúng tôi luôn lắng nghe và thấu hiểu
+                nhu cầu khách hàng, linh hoạt thiết kế các chương trình du lịch
+                chất lượng cao, chi phí hợp lý và trải nghiệm trọn vẹn nhất.
+            </p>
+
+            <p>
+                Song song đó, công ty còn phát triển mạnh mẽ dịch vụ
+                <strong>Chuyển Phát Nhanh trong nước & quốc tế</strong> và
+                Kho nhận hàng Bắc – Nam Kiều Hạ với cam kết:
+                <strong>An toàn – Nhiệt tình – Nhanh gọn – Giá tốt.</strong>
+            </p>
+
+            <p>
+                Mỗi niềm tin khách hàng trao gửi chính là động lực để chúng tôi
+                hoàn thiện và phát triển mỗi ngày.
+            </p>
+        </div>
+
+        <div class="about-image">
+            <img src="images/about.jpg" alt="Summer Tourist">
+        </div>
+
+    </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="values-section">
+    <div class="container">
+        <h2 class="section-title">GIÁ TRỊ CỐT LÕI</h2>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <h3>Chất lượng</h3>
+                <p>Luôn đặt chất lượng dịch vụ lên hàng đầu.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Tận tâm</h3>
+                <p>Lắng nghe và đồng hành cùng khách hàng.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Uy tín</h3>
+                <p>Xây dựng niềm tin bằng sự chuyên nghiệp.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Phát triển</h3>
+                <p>Không ngừng đổi mới và nâng cao dịch vụ.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- footer placeholder -->
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id, url) {
+    fetch(url)
+      .then(r => r.text())
+      .then(html => document.getElementById(id).innerHTML = html);
+  }
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>

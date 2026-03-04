@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Summer Tourist</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<section class="section">
+<div class="container blog-layout">
+
+<div class="blog">
+
+<div class="post">
+<div class="date-box"><span>22</span>Th12</div>
+<div>
+<h3>Về Phan Thiết miền biển thanh bình vẫy gọi</h3>
+<p>Đôi nét về du lịch Phan Thiết – thành phố biển xinh đẹp và yên bình...</p>
+</div>
+</div>
+
+<div class="post">
+<div class="date-box"><span>18</span>Th12</div>
+<div>
+<h3>Khám phá Núi Tà Cú linh thiêng nổi tiếng Bình Thuận</h3>
+<p>Vài nét về Núi Tà Cú – địa điểm du lịch tâm linh nổi tiếng...</p>
+</div>
+</div>
+
+<div class="post">
+<div class="date-box"><span>17</span>Th12</div>
+<div>
+<h3>Khám phá ngọn hải đăng Kê Gà hơn trăm năm tuổi</h3>
+<p>Hải đăng Kê Gà – công trình lịch sử được người Pháp xây dựng...</p>
+</div>
+</div>
+
+<div class="post">
+<div class="date-box"><span>16</span>Th12</div>
+<div>
+<h3>Khám phá đồi cát bay kỳ vĩ tại Phan Thiết</h3>
+<p>Check-in Đồi Cát Bay với hàng loạt hoạt động hấp dẫn...</p>
+</div>
+</div>
+
+<div class="post">
+<div class="date-box"><span>13</span>Th12</div>
+<div>
+<h3>Ghé thăm làng chài Mũi Né bình yên</h3>
+<p>Làng chài Mũi Né – nét đẹp bình dị của miền biển...</p>
+</div>
+</div>
+
+<div class="pagination">
+<span>1</span>
+<span>2</span>
+<span>3</span>
+<span>4</span>
+<span>…</span>
+<span>20</span>
+</div>
+
+</div>
+
+<div class="sidebar">
+
+<div class="widget">
+<h4>Chuyên mục</h4>
+<ul>
+<li>Blog (194)</li>
+</ul>
+</div>
+
+<div class="widget">
+<h4>Tour – Khách sạn HOT</h4>
+<ul>
+<li>Tour Làng Gốm Vân Sơn – Bảo Tàng Quang Trung <div class="price">450,000 ₫</div></li>
+<li>Quy Nhơn - Phú Yên <div class="price">1,999,000 ₫</div></li>
+<li>Hòn Khô - Kỳ Co - Eo Gió <div class="price">950,000 ₫</div></li>
+<li>Hà Nội - Hạ Long <div class="price">4,850,000 ₫</div></li>
+</ul>
+</div>
+
+<div class="widget">
+<h4>Bài viết mới</h4>
+<ul>
+<li>Về Phan Thiết miền biển thanh bình</li>
+<li>Khám phá Núi Tà Cú</li>
+<li>Hải đăng Kê Gà</li>
+<li>Đồi cát bay Phan Thiết</li>
+<li>Làng chài Mũi Né</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id,url){fetch(url).then(r=>r.text()).then(html=>document.getElementById(id).innerHTML=html);}
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ - Summer Tourist</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>LIÊN HỆ SUMMER TOURIST</h1>
+  </div>
+</section>
+
+<section class="section">
+<div class="info">
+<h2>CÔNG TY TNHH TMDV DU LỊCH SUMMER TOURIST</h2>
+<p><strong>Văn phòng tại Thành Phố Quy Nhơn</strong></p>
+<p>📍 04 Xuân Thủy, TP Quy Nhơn, Bình Định</p>
+<p>📍 06 Nguyễn Xuân Nhĩ, TP Quy Nhơn, Bình Định</p>
+<p>📞 093 484 51 08 – 098 200 4389</p>
+<p>📜 GPLHNĐ : 52-0038/2022/SDL</p>
+<p>📧 summertour76@gmail.com</p>
+<p>🌐 www.summertourist.vn</p>
+<p>📘 www.facebook.com/summertourist</p>
+</div>
+
+<div class="form-box">
+<h2>Gửi ý kiến / Thắc mắc</h2>
+<form>
+<label>Họ và tên</label>
+<input type="text" placeholder="Nhập họ và tên">
+
+<label>Điện thoại</label>
+<input type="text" placeholder="Nhập số điện thoại">
+
+<label>Email</label>
+<input type="email" placeholder="Nhập email">
+
+<label>Địa chỉ</label>
+<input type="text" placeholder="Nhập địa chỉ">
+
+<label>Ghi chú</label>
+<textarea rows="4" placeholder="Nội dung cần gửi"></textarea>
+
+<button type="submit">Gửi thông tin</button>
+</form>
+</div>
+
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id,url){fetch(url).then(r=>r.text()).then(html=>document.getElementById(id).innerHTML=html);}
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khách sạn | Summer Tourist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<!-- BREADCRUMB -->
+<section class="breadcrumb">
+    <div class="container">
+        Trang chủ / <strong>Khách sạn</strong>
+    </div>
+</section>
+
+<!-- HOTEL LIST -->
+<section class="tour-section">
+    <div class="container">
+
+        <div class="tour-topbar">
+            <div>Hiển thị 1–12 của 27 kết quả</div>
+            <select>
+                <option>Sắp xếp mặc định</option>
+                <option>Giá tăng dần</option>
+                <option>Giá giảm dần</option>
+            </select>
+        </div>
+
+        <div class="hotel-grid">
+
+            <!-- HOTEL CARD -->
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?21" alt="">
+                <div class="hotel-content">
+                    <h3>ANYA HOTEL QUY NHƠN</h3>
+                    <p class="address">03 Nguyễn Trung Tín, Tp. Quy Nhơn</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">1,450,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?22" alt="">
+                <div class="hotel-content">
+                    <h3>ATHENA HOTEL</h3>
+                    <p class="address">08 Lê Lai, Tp. Quy Nhơn</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">850,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?23" alt="">
+                <div class="hotel-content">
+                    <h3>CROWN RETREAT QUY NHƠN</h3>
+                    <p class="address">Khu Trung Lương, Phù Cát</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">1,990,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?24" alt="">
+                <div class="hotel-content">
+                    <h3>FLC LUXURY HOTEL</h3>
+                    <p class="address">Khu nghỉ dưỡng FLC Quy Nhơn</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">1,650,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?25" alt="">
+                <div class="hotel-content">
+                    <h3>Fleur De Lys Hotel</h3>
+                    <p class="address">16 Nguyễn Huệ, Tp. Quy Nhơn</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">1,450,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <img src="https://picsum.photos/400/250?26" alt="">
+                <div class="hotel-content">
+                    <h3>BLUESEA HOTEL</h3>
+                    <p class="address">02B Trần Độc, Tp. Quy Nhơn</p>
+                    <div class="stars">★★★★★</div>
+                    <div class="price">550,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+        </div>
+
+    </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id,url){fetch(url).then(r=>r.text()).then(html=>document.getElementById(id).innerHTML=html);}
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>

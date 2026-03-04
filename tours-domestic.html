@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Trong Nước | Summer Tourist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="site-header"></div>  <!-- shared header -->
+
+<!-- BREADCRUMB -->
+<section class="breadcrumb">
+    <div class="container">
+        Trang chủ / <strong>Tour trong nước</strong>
+    </div>
+</section>
+
+<!-- TOUR LIST -->
+<section class="tour-section">
+    <div class="container">
+
+        <div class="tour-topbar">
+            <div>Hiển thị 1–12 của 45 kết quả</div>
+            <select>
+                <option>Sắp xếp mặc định</option>
+                <option>Giá tăng dần</option>
+                <option>Giá giảm dần</option>
+            </select>
+        </div>
+
+        <div class="tour-grid">
+
+            <!-- TOUR ITEM -->
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?1" alt="Tour">
+                <div class="tour-content">
+                    <h3>HÀ NỘI – TRÀNG AN – BÁI ĐÍNH – HẠ LONG – YÊN TỬ</h3>
+                    <p>3 ngày 2 đêm</p>
+                    <div class="price">3,650,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?2" alt="Tour">
+                <div class="tour-content">
+                    <h3>HÀ NỘI – SAPA – FANSIPAN</h3>
+                    <p>4 ngày 3 đêm</p>
+                    <div class="price">3,950,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?3" alt="Tour">
+                <div class="tour-content">
+                    <h3>CHÂU ĐỐC – CẦN THƠ – CÀ MAU – ĐẤT MŨI</h3>
+                    <p>4 ngày 3 đêm</p>
+                    <div class="price">4,050,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?4" alt="Tour">
+                <div class="tour-content">
+                    <h3>ĐÀ LẠT THÀNH PHỐ NGÀN HOA</h3>
+                    <p>3 ngày 2 đêm</p>
+                    <div class="price">3,490,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?5" alt="Tour">
+                <div class="tour-content">
+                    <h3>ĐẢO LÝ SƠN</h3>
+                    <p>2 ngày 1 đêm</p>
+                    <div class="price">2,250,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="https://picsum.photos/400/250?6" alt="Tour">
+                <div class="tour-content">
+                    <h3>HÒN KHÔ – KỲ CO – EO GIÓ</h3>
+                    <p>1 ngày</p>
+                    <div class="price">950,000 VNĐ</div>
+                    <a href="#" class="btn">Xem chi tiết</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+        </div>
+
+    </div>
+</section>
+
+<div id="site-footer"></div>
+
+<script>
+  function includeHTML(id, url) {
+    fetch(url).then(r=>r.text()).then(html=>document.getElementById(id).innerHTML=html);
+  }
+  includeHTML('site-header','header.html');
+  includeHTML('site-footer','footer.html');
+</script>
+
+</body>
+</html>
