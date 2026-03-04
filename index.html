@@ -12,14 +12,54 @@
 <!-- dynamic header include -->
 <div id="site-header"></div>  <!-- header.html will be injected -->
 
-<!-- HERO -->
+<!-- HERO SLIDER -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>DU LỊCH <span>QUY NHƠN - PHÚ YÊN</span></h1>
-    <p>Trải nghiệm biển xanh - giá tốt - dịch vụ chuẩn</p>
-    <button class="btn-primary">ĐẶT TOUR NGAY</button>
-    <button class="btn-yellow">TƯ VẤN MIỄN PHÍ</button>
+  <div class="slider-container">
+    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1500');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1>Thế Giới Niềm Vui Của Bạn</h1>
+        <p>Khám phá và đặt các hoạt động du lịch đặc sắc với giá độc quyền</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1500');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1>Trải Nghiệm Biển Xanh</h1>
+        <p>Khám phá những bãi biển đẹp nhất Quy Nhơn - Phú Yên</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1500');">
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <h1>Du Lịch Toàn Cầu</h1>
+        <p>Khám phá những điểm đến nổi tiếng trên toàn thế giới</p>
+      </div>
+    </div>
+
+    <button class="slide-nav prev" onclick="changeSlide(-1)">❮</button>
+    <button class="slide-nav next" onclick="changeSlide(1)">❯</button>
+
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <input type="text" placeholder="Tìm kiếm (vd: Mũi Điện, Quy Nhơn...)" class="search-input">
+        <button class="search-btn">Khám phá</button>
+      </div>
+    </div>
   </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    
+    function changeSlide(direction) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    
+    setInterval(() => changeSlide(1), 5000); // Auto slide every 5 seconds
+  </script>
 </section>
 
 <!-- TOUR TRONG NƯỚC -->
@@ -32,7 +72,8 @@
       <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
       <div class="card-content">
         <h3>TOUR PHÚ YÊN – MŨI ĐIỆN</h3>
-        <p>1 ngày</p>
+        <p>📍 Mũi Điện, Chùa Thanh Lương, Gành Đá Đĩa</p>
+        <p>⏱️ 1 ngày</p>
         <div class="price">850,000 VNĐ</div>
         <button>Xem chi tiết</button>
       </div>
@@ -42,7 +83,8 @@
       <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
       <div class="card-content">
         <h3>TOUR QUY NHƠN – THIÊN ĐƯỜNG BIỂN</h3>
-        <p>3 ngày 2 đêm</p>
+        <p>📍 Quy Nhơn</p>
+        <p>⏱️ 3 ngày 2 đêm</p>
         <div class="price">3,490,000 VNĐ</div>
         <button>Xem chi tiết</button>
       </div>
@@ -51,28 +93,140 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
       <div class="card-content">
-        <h3>TOUR CÙ LAO XANH</h3>
-        <p>1 ngày</p>
+        <h3>TOUR QUY NHƠN CITY</h3>
+        <p>📍 Quảng Trường - Ghềnh Ráng - Tháp Đôi</p>
+        <p>⏱️ 1 ngày</p>
+        <div class="price">550,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+      <div class="card-content">
+        <h3>TOUR PHÚ YÊN – THÁP NGHINH PHONG</h3>
+        <p>📍 Phú Yên</p>
+        <p>⏱️ 1 ngày</p>
         <div class="price">750,000 VNĐ</div>
         <button>Xem chi tiết</button>
       </div>
     </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <div class="card-content">
+        <h3>TOUR CÙ LAO XANH</h3>
+        <p>📍 Cù Lao Xanh</p>
+        <p>⏱️ 1 ngày</p>
+        <div class="price">750,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+      <div class="card-content">
+        <h3>TOUR TÂY SƠN – HẦM HÔ</h3>
+        <p>📍 Hầm Hô</p>
+        <p>⏱️ 1 ngày</p>
+        <div class="price">800,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="center" style="margin-top: 30px;">
+    <button class="btn-primary">Xem thêm tour</button>
+  </div>
+</section>
+
+<!-- TOUR QUỐC TẾ -->
+<section class="section bg-light">
+  <h2 class="section-title">TOUR QUỐC TẾ</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4">
+      <div class="card-content">
+        <h3>SYDNEY – BLUE MOUNTAINS</h3>
+        <p>📍 Sydney - Blue Mountains</p>
+        <p>⏱️ 5 ngày 4 đêm</p>
+        <div class="price">29.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520763185298-1b434c919eba">
+      <div class="card-content">
+        <h3>HÀ NỘI – HÀ KHẨU – MÔNG TỰ – ĐẠI LÝ – LỆ GIANG – SHANGRILA</h3>
+        <p>📍 Hà Nội - Hà Khẩu - Côn Minh</p>
+        <p>⏱️ 6 ngày 5 đêm</p>
+        <div class="price">13.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f">
+      <div class="card-content">
+        <h3>LỆ GIANG – ĐẠI LÝ – SHANGRILA</h3>
+        <p>📍 Lệ Giang - Đại Lý - Shangrila</p>
+        <p>⏱️ 6 ngày 5 đêm</p>
+        <div class="price">20.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528132488620-7ee0d4295aa3">
+      <div class="card-content">
+        <h3>LỆ GIANG – SHANGRILA</h3>
+        <p>📍 Lệ Giang - Shangrila</p>
+        <p>⏱️ 5 ngày 4 đêm</p>
+        <div class="price">19.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515565143207-6581e2e3e6c3">
+      <div class="card-content">
+        <h3>HỒNG KÔNG – THÂM QUYẾN</h3>
+        <p>📍 Hồng Kông - Thâm Quyến</p>
+        <p>⏱️ 4 ngày 3 đêm</p>
+        <div class="price">16.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1528127269029-59ad7fab72d2">
+      <div class="card-content">
+        <h3>THƯỢNG HẢI – HÀNG CHÂU – BẮC KINH</h3>
+        <p>📍 Thượng Hải - Hàng Châu - Bắc Kinh</p>
+        <p>⏱️ 7 ngày 6 đêm</p>
+        <div class="price">23.xxx.xxx VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="center" style="margin-top: 30px;">
+    <button class="btn-primary">Xem thêm tour</button>
   </div>
 </section>
 
 <!-- TEAM BUILDING -->
-<section class="section bg-light">
+<section class="section">
   <h2 class="section-title">TEAM BUILDING</h2>
   <p class="center-text">
-    SUMMER TOURIST cung cấp các chương trình team building độc đáo, xây dựng tinh thần đoàn kết và phát triển đội nhóm.
+    Ngoài các chương trình tour trong nước và quốc tế, SUMMER TOURIST còn cung cấp các chương trình team building độc đáo, từ những trò chơi trí tuệ đến các sự kiện ngoại ô kích thích tinh thần phiêu lưu. Team building không chỉ là những trò chơi và hoạt động giải trí, đó là quá trình xây dựng lòng tin, tạo ra mối quan hệ, và thúc đẩy sự hợp tác giữa các thành viên của một đội nhóm. Điều này giúp họ hiểu rõ hơn về nhau, nâng cao khả năng giao tiếp, và tăng cường lòng đoàn kết. Đội ngũ nhân viên SUMMER TOURIST luôn tìm kiếm những ý tưởng mới để mang lại trải nghiệm mới lạ.
   </p>
   <div class="center">
     <button class="btn-primary">Tìm hiểu thêm</button>
   </div>
 </section>
-
-<!-- KHÁCH SẠN -->
 <section class="section">
   <h2 class="section-title">KHÁCH SẠN GIÁ TỐT</h2>
   <div class="grid">
@@ -80,7 +234,9 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
       <div class="card-content">
-        <h3>ANYA PREMIER HOTEL</h3>
+        <h3>ANYA PREMIER HOTEL QUY NHƠN</h3>
+        <p>📍 44 An Dương Vương, Tp. Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
         <div class="price">1,650,000 VNĐ</div>
         <button>Xem chi tiết</button>
       </div>
@@ -89,21 +245,165 @@
     <div class="card">
       <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
       <div class="card-content">
-        <h3>FLC LUXURY HOTEL</h3>
+        <h3>FLC LUXURY HOTEL QUY NHƠN</h3>
+        <p>📍 Khu nghỉ dưỡng FLC Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
         <div class="price">1,650,000 VNĐ</div>
         <button>Xem chi tiết</button>
       </div>
     </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1631049307038-da31da474f71">
+      <div class="card-content">
+        <h3>KHÁCH SẠN HƯƠNG VIỆT</h3>
+        <p>📍 102 Xuân Diệu, Tp Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <div class="price">1,450,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074">
+      <div class="card-content">
+        <h3>KHÁCH SẠN HẢI ÂU – SEAGULL HOTEL</h3>
+        <p>📍 489 An Dương Vương, Tp. Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <div class="price">1,450,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615299838223-9e0bcf4a88e9">
+      <div class="card-content">
+        <h3>BLOSSOM SEA HOMESTAY QUY NHƠN</h3>
+        <p>📍 270 Diên Hồng, Tp. Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <div class="price">450,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1622517407165-cd94368aa274">
+      <div class="card-content">
+        <h3>CĂN HỘ TMS</h3>
+        <p>📍 28 Nguyễn Huệ, Tp. Quy Nhơn</p>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <div class="price">1,100,000 VNĐ</div>
+        <button>Xem chi tiết</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="center" style="margin-top: 30px;">
+    <button class="btn-primary">Xem thêm khách sạn</button>
+  </div>
+</section>
+
+<!-- DỊCH VỤ XE DU LỊCH -->
+<section class="section">
+  <h2 class="section-title">DỊCH VỤ XE DU LỊCH</h2>
+  <p class="center-text">
+    Công ty TNHH TMDV Du lịch SUMMER TOURIST chuyên cung cấp các dòng xe 4 – 45 chỗ đời mới để phục vụ quý khách. Chúng tôi luôn mang đến dịch vụ chuyên nghiệp và thân thiện. Đội ngũ lái xe của chúng tôi được đào tạo chuyên sâu về kĩ năng an toàn và chăm sóc khách hàng. Chúng tôi cam kết cung cấp dịch vụ chất lượng cao với mức giá hợp lý nhất. Bạn có thể yên tâm lựa chọn vào dịch vụ của SUMMER TOURIST, vì chúng tôi hiểu rằng một chuyến đi tuyệt vời không chỉ là điểm đến mà còn từ chất lượng phục vụ trên cung đường đi.
+  </p>
+  <div class="center">
+    <button class="btn-primary">Tìm hiểu thêm</button>
   </div>
 </section>
 
 <!-- CHUYỂN PHÁT NHANH -->
 <section class="section bg-light">
-  <h2 class="section-title">CHUYỂN PHÁT NHANH</h2>
+  <h2 class="section-title">⛴ CHUYỂN PHÁT NHANH TRONG & NGOÀI NƯỚC ⛴</h2>
+  <h3 class="center-text" style="margin-bottom: 20px; color: #ff6b6b;">🛑 GIÁ SIÊU RẺ 🛑</h3>
   <p class="center-text">
-    Giao hàng trong & ngoài nước – Không phát sinh phí – Có tracking theo dõi.
+    Chào mừng bạn đến với Summer Tourist – đối tác tin cậy của bạn trong lĩnh vực chuyển phát nhanh. Chúng tôi tự hào là một trong những công ty hàng đầu cung cấp dịch vụ chuyển phát uy tín, nhanh chóng, an toàn.
   </p>
+  <div style="max-width: 800px; margin: 30px auto; background: #f8f9fa; padding: 20px; border-radius: 8px;">
+    <div style="margin: 15px 0;">
+      <p>⚡️ <strong>Đa dạng mặt hàng gửi:</strong> Hồ sơ, tài liệu, vessel, hàng hóa, đồ gia dụng, thực phẩm…đến mỹ phẩm, phụ kiện ngành nail, đồ điện tử…</p>
+    </div>
+    <div style="margin: 15px 0;">
+      <p>⚡️ <strong>Hỗ trợ thu gom tại nhà:</strong> Miễn phí đóng gói thùng carton, xử lý chân không thực phẩm, gia cố hàng hóa an toàn trong quá trình vận chuyển</p>
+    </div>
+    <div style="margin: 15px 0;">
+      <p>⚡️ <strong>Vận chuyển quốc tế:</strong> Hàng quốc tế Nhật, Úc, Mỹ, Canada….với hơn 200 quốc gia</p>
+    </div>
+    <div style="margin: 15px 0;">
+      <p>⚡️ <strong>Tracking theo dõi:</strong> Cung cấp tracking toàn bộ quá trình vận chuyển</p>
+    </div>
+    <div style="margin: 15px 0;">
+      <p>⚡️ <strong>Không phát sinh phí:</strong> Vận chuyển hàng không có phí bất ngờ</p>
+    </div>
+  </div>
+  <p class="center-text">
+    Summer Tourist không ngừng nỗ lực nâng cao chất lượng dịch vụ để mang đến sự hài lòng tối đa cho quý khách hàng.
+  </p>
+  <div class="center">
+    <button class="btn-primary">Tìm hiểu thêm</button>
+  </div>
+</section>
+
+<!-- ĐÁNH GIÁ KHÁCH HÀNG -->
+<section class="section">
+  <h2 class="section-title">ĐÁNH GIÁ KHÁCH HÀNG</h2>
+  <div class="center-text" style="margin-bottom: 30px;">
+    <p style="font-size: 24px; color: #ffc107;">⭐⭐⭐⭐⭐ 5.0</p>
+    <p>(12 đánh giá)</p>
+  </div>
+  <div style="max-width: 600px; margin: 0 auto; background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+    <h3 style="margin-top: 0;">Gửi đánh giá của bạn</h3>
+    <form style="display: flex; flex-direction: column; gap: 15px;">
+      <div>
+        <label>Họ và tên</label>
+        <input type="text" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;" placeholder="Nhập họ và tên">
+      </div>
+      <div>
+        <label>Nhận xét của bạn</label>
+        <textarea style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; min-height: 120px;" placeholder="Nhập nhận xét..."></textarea>
+      </div>
+      <div>
+        <label>Tải lên hình ảnh (Tối đa 4 ảnh)</label>
+        <input type="file" multiple style="width: 100%; padding: 10px;">
+      </div>
+      <button type="submit" class="btn-primary" style="align-self: flex-start;">Gửi đánh giá</button>
+    </form>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="section bg-light">
+  <h2 class="section-title">BLOG</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+      <div class="card-content">
+        <h3>Về Phan Thiết miền biển thanh bình vẫy gọi</h3>
+        <p>1. Đôi nét về du lịch Phan Thiết Thành phố Phan Thiết nằm cách trung tâm TP. Hồ Chí Minh khoảng 200 km về phía Đông Bắc, là một điểm đến du...</p>
+        <button>Xem tiếp</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4">
+      <div class="card-content">
+        <h3>Khám phá Núi Tà Cú linh thiêng nổi tiếng Bình Thuận</h3>
+        <p>1. Vài nét về Núi Tà Cú Địa chỉ: Quốc lộ 1A, xã Tân Lập, thị trấn Thuận Nam, huyện Hàm Thuận Nam, tỉnh Bình Thuận Giá vé tham khảo: Xe điện...</p>
+        <button>Xem tiếp</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+      <div class="card-content">
+        <h3>Khám phá ngọn hải đăng Kê Gà hơn trăm năm tuổi</h3>
+        <p>Hải đăng Kê Gà nằm trên hòn đảo mang cùng tên, được người Pháp xây dựng vào cuối thế kỷ XIX. Trải qua hàng trăm năm tồn tại, ngọn hải đăng vẫn...</p>
+        <button>Xem tiếp</button>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- dynamic footer include -->
